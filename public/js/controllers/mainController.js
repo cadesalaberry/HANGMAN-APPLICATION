@@ -1,6 +1,6 @@
 // MAIN CONTROLLER
 function mainController($scope, $http, PenduService) {
-	$scope.Pendu = "pendu";
+	$scope.Pendu = "PENDU";
 	
 	function load(){
 		PenduService.get().then(function(res){

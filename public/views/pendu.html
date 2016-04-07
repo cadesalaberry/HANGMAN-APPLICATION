@@ -8,15 +8,15 @@
 </form>
 <hr>
 <ul class="list-group">
-	<li class="list-group-item" ng-repeat="todo in todos">
+	<li class="list-group-item" ng-repeat="p in pendu">
 		<form class="form-inline">
 			<div class="form-group">
 				<input type="text" class="form-control" id="inputMessage" 
-					   ng-model="todo.description">
+					   ng-model="p.description">
 			</div>
 			<div class="pull-right">
-				<button type="submit" class="btn btn-default" ng-click="update(todo)">Update</button>
-				<button type="submit" class="btn btn-danger" ng-click="delete(todo)">Delete</button>
+				<button type="submit" class="btn btn-default" ng-click="update(pendu)">Update</button>
+				<button type="submit" class="btn btn-danger" ng-click="delete(pendu)">Delete</button>
 			</div>
 		</form>
 	</li>
