@@ -2,14 +2,14 @@
 function mainController($scope, $http, PenduService) {
 	$scope.Pendu = "PENDU";
 	$scope.failedGuess = [];
-	$scope.count = 0 ;
+	$scope.count = 0;
 	$scope.chercherLettre = function () {
-		for (var i=1; i < $scope.garder.length-1; i++){
-			if ($scope.lettre == $scope.garder[i]){
+		for (var i = 1; i < $scope.garder.length - 1; i++) {
+			if ($scope.lettre == $scope.garder[i]) {
 				$scope.count++
 			}
 		}
-		if ($scope.count == 0){
+		if ($scope.count == 0) {
 			$scope.failedGuess.push($scope.lettre);
 		}
 	}
