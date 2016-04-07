@@ -5,7 +5,7 @@ function mainController($scope, $http, PenduService) {
 	$scope.chercherLettre = function () {
 		$scope.failedGuess = [];
 		$scope.failedGuess.push($scope.lettre);
-
+	}
 		$scope.pendu = function () {
 			$scope.garder = $scope.mot;
 			$scope.tiret = "";
