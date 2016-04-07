@@ -23,6 +23,7 @@ body {
 
 button, input{
 	border-radius: 40px;
+
 }
 
 .pendu {
@@ -33,4 +34,8 @@ button, input{
 
 .container {
 	width: 600px;
+}
+
+.margin-top {
+	margin-top:35px;
 }

@@ -1,21 +1,22 @@
+
+<!--Ecrire & Chercher le mot -->
+
 <center>
-	<div class="pendu">
+<h1>{{felicitation}}</h1>
+	<div class="pendu" ng-hide="felicitation">
 		<h1>{{Pendu}}</h1>
-		<input type="text" class="text-center" ng-model="mot" placeholder="Votre Mot" /> {{motCache}}
-		<button type="submit" ng-click="pendu()">VALIDER VOTRE MOT</button>
+		<input type="text" class="text-center margin-top" ng-model="mot" placeholder="Votre Mot" ng-hide="motCache"/> <h3>{{motCache}}</h3>
+		<button type="submit" ng-click="pendu()" ng-hide="motCache">VALIDER VOTRE MOT</button>
+
+		<input type="text" class="text-center margin-top" ng-model="lettre" placeholder="Taper une lettre" maxlength="1" ng-show="motCache" />
 		<br>
 		<br>
-		<br>
-		<input type="text" class="text-center" ng-model="lettre" placeholder="Taper une lettre" />
-		<br>
-		<br>
-		<button type="submit" ng-click="chercherLettre()">CHERCHER SI LA LETTRE FAIT PARTIT DU MOT</button>
+		<button type="submit" ng-click="chercherLettre()" ng-show="motCache">CHERCHER SI LA LETTRE FAIT PARTIT DU MOT</button>
 		<br>
 	</div>
 </center>
 
-
-
+<!--Dessin pendu -->
 
 <center><svg width="400" height="400">
 	<rect ng-show="failedGuess.length >= 1" x="0" y="0" width="40" height="400"></rect>
