@@ -18,4 +18,19 @@ body {
 .h1, h1 {
 	text-align: center;
 	font-size: 40px;
+	margin-top: -5px;
+}
+
+button, input{
+	border-radius: 40px;
+}
+
+.pendu {
+	border: 8px solid black;
+	border-radius: 20px;
+	padding: 30px;
+}
+
+.container {
+	width: 600px;
 }
