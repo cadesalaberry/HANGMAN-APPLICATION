@@ -1,18 +1,21 @@
-body{
-    padding-top: 70px;
+body {
+	padding-top: 70px;
+	background-color: lightpink;
 }
-.navbar-border{
+
+.navbar-border {
 	border-bottom: 3px solid #F0DB4F;
 }
-.navbar-header img{
+
+.navbar-header img {
 	transition: 0.4s;
 }
-.navbar-header img:hover{
+
+.navbar-header img:hover {
 	transform: rotate(360deg);
-}  
+}
 
 .h1, h1 {
-	
-text-align: center;
+	text-align: center;
 	font-size: 40px;
 }
