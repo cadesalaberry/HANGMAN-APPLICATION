@@ -1,5 +1,5 @@
 // TODO SERVICE
-function todoService($http) {
+function PenduService($http) {
     return {
         get : function() {
             return $http.get('/pendu');

@@ -18,10 +18,8 @@ function run($rootScope, $location){
 angular.module('app', ['ngRoute'])
     .config(config)
     .controller('mainController', mainController)
-    .service('todoService', todoService)
+    .service('penduService', todoService)
     /*.factory('', )*/
     .run(run);
 
-
-.controller("mainController",mainController)
 
