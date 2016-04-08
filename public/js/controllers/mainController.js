@@ -15,12 +15,25 @@ function mainController($scope, $http, PenduService) {
 		if ($scope.count == 0) {
 			$scope.failedGuess.push($scope.lettre);
 		}
-		
+
 		$scope.lettre = "";
-		if($scope.garder == $scope.motCache.replace(/[ ]+/g, ""))
+		if ($scope.garder == $scope.motCache.replace(/[ ]+/g, ""))
 			$scope.felicitation = "Félicitation Wilder, tu as trouvé le bon mot !!!";
+		
 	}
 
+	$scope.auto = function () {
+		$scope.failedGuess = [];
+		$scope.count = 0;
+		$http.get('/random').then(function (res) {
+			$scope.garder = res.data;
+				$scope.tiret = "";
+			for (var lettre = 0; lettre < $scope.garder.length - 2; lettre++) {
+				$scope.tiret += " _";
+			}
+			$scope.motCache = $scope.garder[0] + $scope.tiret + $scope.garder[$scope.garder.length - 1];
+		});
+	}
 	$scope.pendu = function () {
 		$scope.failedGuess = [];
 		$scope.count = 0;
