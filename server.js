@@ -3,6 +3,7 @@ var http			= require('http');
 var express			= require('express');
 var app				= express();								// create our app w/ express
 var port			= process.env.PORT || 8000;					// set the port
+app.set('view engine', 'ejs');
 var morgan			= require('morgan');
 var bodyParser		= require('body-parser');
 var methodOverride	= require('method-override');
